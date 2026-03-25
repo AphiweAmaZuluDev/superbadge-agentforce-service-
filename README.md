@@ -22,3 +22,21 @@ To meet these demands, Coral Cloud Resorts is expanding service hours, offering 
 ### Step 1: Defining Role & Context
 
 <img width="1917" height="869" alt="Define Agent Role and Context " src="https://github.com/user-attachments/assets/2f651f8e-1224-495a-921b-9d2428d66489" />
+
+## Solution:
+### Step 1: Defining Role & Context
+
+<img width="1917" height="869" alt="Define Agent Role and Context " src="https://github.com/user-attachments/assets/2f651f8e-1224-495a-921b-9d2428d66489" />
+
+### Step 2: Integration of knowledge articles within the Agenforce Builder
+I started by managing the data sources to provide access to the knowledge articles. I did this by creating 2 data libraries, one for the knowledge articles called **Coral Cloud Experience Agent Library** and another for the code of conduct agreement pdf file called **Code of Conduct Agreement**. 
+
+**Coral Cloud Experience Agent Library Configuration**
+<img width="1919" height="866" alt="Configure Data Library - 1" src="https://github.com/user-attachments/assets/04b12ffd-d4a5-487e-806b-5c7d49feb421" />
+---
+<img width="1917" height="867" alt="Configure Data Library - 2" src="https://github.com/user-attachments/assets/f991f7f5-b24c-4731-a88d-a4fa82d84d66" />
+---
+**Code of Conduct Agreement Library Configuration**
+<img width="1918" height="874" alt="Configure CoC Data Library - 3" src="https://github.com/user-attachments/assets/c8e3ccac-9e8e-4f31-9398-4eaf36552622" />
+
+

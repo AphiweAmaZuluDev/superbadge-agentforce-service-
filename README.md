@@ -14,8 +14,11 @@ To meet these demands, Coral Cloud Resorts is expanding service hours, offering 
 - Use topics like General FAQs to handle common questions and create custom topics to highlight festival-related offerings.
 - Set up routing flows to transfer unresolved or complex guest queries to service representatives for further assistance.
 
-### ROI
-- The Coral Cloud Experience Agent aims to help the resort maintain exceptional guest service during the busy festival season while optimizing staff workloads.
+### Business Value & Technical Impact
+- Optimized Staff Workloads: Automated the resolution of high-volume, tier-1 guest inquiries, such as FAQs and booking modifications. This significantly reduces human agent handle time during the peak festival season.
+- 24/7 Autonomous Service: Enabled continuous, personalized guest support by deploying the Agentforce virtual concierge directly to the resort's Experience Cloud site.
+- Trusted & Grounded AI: Ensured brand safety and accurate information delivery by restricting the agent's knowledge base to trusted Data Libraries, including official Knowledge Articles and compliance PDFs.
+- Seamless Escalation Architecture: Maintained high customer satisfaction by implementing Omni-Channel routing flows (Route to ESA and ESA - Route to Queue), ensuring complex queries are instantly transferred to the right human service representatives.
 
 ## Solution:
 ### Step 1: Defining Role & Context
@@ -48,7 +51,7 @@ Next I configured the **Booking Management** topic which includes specific instr
 
 ### Step 4: Add Standard Topics & General FAQ & Escalation
 In this step I aim to ensure the agent uses trusted data sources, such as Knowledge articles and the Code of Conduct PDF, for accurate responses. Additionally, I ensure the agent can escalate complex queries to a service representative when necessary.
-To do this I had to use an agent action to invoke the Film_Festival_Related_Answers prompt template. The prompt template generates a response to the user’s question based on the relevant information from Knowledge articles and the Code of Conduct file. I then had to set the guardrails to get answers from the response of the Film_Festival_Related_Answers prompt template, then create a new action to invoke the prompt template and then associate this new action to the General FAQ topic.
+To do this I used an agent action to invoke the Film_Festival_Related_Answers prompt template, leveraging RAG (Retrieval-Augmented Generation) to ground the AI's responses in trusted Knowledge Articles and compliance PDFs. The prompt template generates a response to the user’s question based on the relevant information from Knowledge articles and the Code of Conduct file. I then had to set the guardrails to get answers from the response of the Film_Festival_Related_Answers prompt template, then create a new action to invoke the prompt template and then associate this new action to the General FAQ topic.
 
 ### Film_Festival_Related_Answers Prompt Template
 <img width="1919" height="868" alt="Prompt Template Configuration" src="https://github.com/user-attachments/assets/f67e933f-3e45-4dd6-92e9-5135d2a53ca9" />

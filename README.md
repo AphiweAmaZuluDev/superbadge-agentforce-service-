@@ -50,7 +50,7 @@ Next I configured the **Booking Management** topic which includes specific instr
 In this step I aim to ensure the agent uses trusted data sources, such as Knowledge articles and the Code of Conduct PDF, for accurate responses. Additionally, I ensure the agent can escalate complex queries to a service representative when necessary.
 To do this I had to use an agent action to invoke the Film_Festival_Related_Answers prompt template. The prompt template generates a response to the user’s question based on the relevant information from Knowledge articles and the Code of Conduct file. I then had to set the guardrails to get answers from the response of the Film_Festival_Related_Answers prompt template, then create a new action to invoke the prompt template and then associate this new action to the General FAQ topic.
 
-### Film_Festival_Related_Answers Prompt Template Image
+### Film_Festival_Related_Answers Prompt Template
 <img width="1919" height="868" alt="Prompt Template Configuration" src="https://github.com/user-attachments/assets/f67e933f-3e45-4dd6-92e9-5135d2a53ca9" />
 
 ### Testing the Prompt Template
@@ -59,5 +59,21 @@ To do this I had to use an agent action to invoke the Film_Festival_Related_Answ
 ### Agent Action to invoke Prompt Template
 <img width="1919" height="874" alt="General FAQ Agent Action (prompt template)" src="https://github.com/user-attachments/assets/cec88ea6-2f84-4e27-bfa4-64843d703ee1" />
 
+### Step 5: Deploy Agent
+In this step I deploy the agent to the Coral Cloud Resort's Experience Cloud site. To do this successfully I first configured the inbound omnichannel flow, Route to ESA, to transfer conversations from guests on the site to the Coral Cloud Experience Agent. In situations where the guests require assistance from a service representative, the org is equipped with the outbound omnichannel flow, ESA - Route to Queue. The Coral Cloud Experience Agent uses this flow to route escalations to a Messaging queue. I then published the ESA Web Deployment Embedded Service, added the Embedded Messaging component to the coral cloud site, and published the site. 
 
+### Testing the Agent
+<img width="1919" height="871" alt="Testing Agent" src="https://github.com/user-attachments/assets/674aaa1d-527b-46f2-a1c4-c2752eeae23d" />
+
+### Route to ESA Flow Configuration
+<img width="1919" height="873" alt="Route to ESA configuration" src="https://github.com/user-attachments/assets/dbbf4813-b7d0-4c74-b40e-37cc98769b12" />
+
+### Publishing ESA Web Deployment Embedded Service 
+<img width="1918" height="871" alt="Publishing Embedded Service" src="https://github.com/user-attachments/assets/33c265a9-4353-4bd6-aeae-1c43fc58abbd" />
+
+### Adding Embedded messaging component to Experience Cloud Site
+<img width="1919" height="870" alt="Embedded Messaging on Experience Cloud" src="https://github.com/user-attachments/assets/2d428d67-aca7-42d9-9431-6aca2c458eb8" />
+
+### Publishing Experience Cloud Site
+<img width="1919" height="870" alt="Publishing Experience Cloud Site" src="https://github.com/user-attachments/assets/b22a8fbd-de5e-4f0a-98c7-d734f33ed85d" />
 

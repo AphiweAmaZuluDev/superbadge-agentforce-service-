@@ -34,14 +34,30 @@ I started by managing the data sources to provide access to the knowledge articl
 ### Step 3: Booking Management Topic & Agent Actions
 Next I configured the **Booking Management** topic which includes specific instructions for handling guest bookings, ensuring that the topic is aligned with the resort's commitment to seamless guest service. The Booking Management topic has 3 actions associated with it, the **Get Booking**, **Adjust Booking** and **Cancel Booking**, which aim to support with booking information retrieval, booking modifications and booking cancellations respectively.
 
-### Booking Management Topic Configuration Image
+### Booking Management Topic Configuration
 <img width="1919" height="868" alt="Booking Management Topic configuration" src="https://github.com/user-attachments/assets/a2c19775-eb35-4f00-9fa0-0cc3f89e27c9" />
 
-### Get Booking Agent Action Configuration Image
+### Get Booking Agent Action Configuration
 <img width="1919" height="871" alt="Get Booking Agent Action" src="https://github.com/user-attachments/assets/1683ca21-e834-44fa-9ae1-b42cf2c8dc62" />
 
-### Adjust Booking Agent Action Configuration Image
+### Adjust Booking Agent Action Configuration
 <img width="1919" height="874" alt="Adjust Booking Agent Action" src="https://github.com/user-attachments/assets/90b98820-23d6-4e14-a7ec-3ee6943ab495" />
 
-### Cancel Booking Agent Action Configuration Image
+### Cancel Booking Agent Action Configuration
 <img width="1919" height="877" alt="Cancel Booking Agent Action" src="https://github.com/user-attachments/assets/b96a79b9-5489-4934-b73c-863da451d4c9" />
+
+### Step 4: Add Standard Topics & General FAQ & Escalation
+In this step I aim to ensure the agent uses trusted data sources, such as Knowledge articles and the Code of Conduct PDF, for accurate responses. Additionally, I ensure the agent can escalate complex queries to a service representative when necessary.
+To do this I had to use an agent action to invoke the Film_Festival_Related_Answers prompt template. The prompt template generates a response to the user’s question based on the relevant information from Knowledge articles and the Code of Conduct file. I then had to set the guardrails to get answers from the response of the Film_Festival_Related_Answers prompt template, then create a new action to invoke the prompt template and then associate this new action to the General FAQ topic.
+
+### Film_Festival_Related_Answers Prompt Template Image
+<img width="1919" height="868" alt="Prompt Template Configuration" src="https://github.com/user-attachments/assets/f67e933f-3e45-4dd6-92e9-5135d2a53ca9" />
+
+### Testing the Prompt Template
+<img width="1919" height="872" alt="Testing the Prompt Template" src="https://github.com/user-attachments/assets/73404a8d-dfcc-4298-a631-e42380dd63b2" />
+
+### Agent Action to invoke Prompt Template
+<img width="1919" height="874" alt="General FAQ Agent Action (prompt template)" src="https://github.com/user-attachments/assets/cec88ea6-2f84-4e27-bfa4-64843d703ee1" />
+
+
+

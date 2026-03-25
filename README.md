@@ -32,7 +32,16 @@ I started by managing the data sources to provide access to the knowledge articl
 <img width="1917" height="867" alt="Configure Data Library - 2" src="https://github.com/user-attachments/assets/4ae5c226-85d8-4eac-a425-b80114982099" />
 
 ### Step 3: Booking Management Topic & Agent Actions
-Next I configured the **Booking Management** topic which includes specific instructions for handling guest bookings, ensuring that the topic is aligned with the resort's commitment to seamless guest service. 
+Next I configured the **Booking Management** topic which includes specific instructions for handling guest bookings, ensuring that the topic is aligned with the resort's commitment to seamless guest service. The Booking Management topic has 3 actions associated with it, the **Get Booking**, **Adjust Booking** and **Cancel Booking**, which aim to support with booking information retrieval, booking modifications and booking cancellations respectively.
 
 ### Booking Management Topic Configuration Image
 <img width="1919" height="868" alt="Booking Management Topic configuration" src="https://github.com/user-attachments/assets/a2c19775-eb35-4f00-9fa0-0cc3f89e27c9" />
+
+### Get Booking Agent Action Configuration Image
+<img width="1919" height="871" alt="Get Booking Agent Action" src="https://github.com/user-attachments/assets/1683ca21-e834-44fa-9ae1-b42cf2c8dc62" />
+
+### Adjust Booking Agent Action Configuration Image
+<img width="1919" height="874" alt="Adjust Booking Agent Action" src="https://github.com/user-attachments/assets/90b98820-23d6-4e14-a7ec-3ee6943ab495" />
+
+### Cancel Booking Agent Action Configuration Image
+<img width="1919" height="877" alt="Cancel Booking Agent Action" src="https://github.com/user-attachments/assets/b96a79b9-5489-4934-b73c-863da451d4c9" />

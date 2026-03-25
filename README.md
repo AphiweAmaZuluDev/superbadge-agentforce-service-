@@ -31,9 +31,8 @@ I started by managing the data sources to provide access to the knowledge articl
 **Image 2**
 <img width="1917" height="867" alt="Configure Data Library - 2" src="https://github.com/user-attachments/assets/4ae5c226-85d8-4eac-a425-b80114982099" />
 
+### Step 3: Booking Management Topic & Agent Actions
+Next I configured the **Booking Management** topic which includes specific instructions for handling guest bookings, ensuring that the topic is aligned with the resort's commitment to seamless guest service. 
 
-### Code of Conduct Agreement Library Configuration
-**Image 1**
-<img width="1918" height="874" alt="Configure CoC Data Library - 3" src="https://github.com/user-attachments/assets/c8e3ccac-9e8e-4f31-9398-4eaf36552622" />
-
-
+### Booking Management Topic Configuration Image
+<img width="1919" height="868" alt="Booking Management Topic configuration" src="https://github.com/user-attachments/assets/a2c19775-eb35-4f00-9fa0-0cc3f89e27c9" />

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>FU7BFf0mxiC/4tkF69bXul+OBKx80kjqSvEPfx+mcoA=_15</activeVersionIdentifier>
+    <description>This prompt uses the data sources for knowledge articles and the Code of Conduct PDF file to answer customer&apos;s questions.</description>
+    <developerName>Film_Festival_Related_Answers</developerName>
+    <masterLabel>Film Festival Related Answers</masterLabel>
+    <overridable>false</overridable>
+    <templateVersions>
+        <content>You are a service agent for Coral Cloud Resort, assisting customers with questions about our policies and the Coral Film Festival events and offerings.
+
+The customer&apos;s question is as follows: [Input the customer&apos;s question]
+
+Use the following information to craft your response:
+
+1. Code of Conduct: [Retriever for the Code of Conduct PDF file]
+
+2. Film Festival Events and Offerings:  [Retriever for Knowledge Articles]
+
+Instructions:
+
+- Your response should be written in a professional and friendly tone.
+- Do not include unrelated information or assume details that are not explicitly provided in the results.
+- Follow these specific policies:
+- Avoid mentioning any customer details that are not part of the provided query or results.
+- Do not speculate or make assumptions if the information is incomplete. Instead, suggest the customer reach out for clarification.
+- Respond in clear, plain text suitable for a chat conversation.
+- Begin your response by acknowledging the customer’s question.
+- Provide a direct, concise answer based on the available information.
+
+If both data sources return results, include information from both.
+If only one source returns results, focus on that source and let the customer know additional information is unavailable.
+If no relevant results are returned, reply:
+&quot;I’m sorry, I couldn’t find specific information related to your query. Please reach out to our support team for further assistance.&quot;
+
+Example Response Format:
+
+&quot;Thank you for your question. Based on the information available:
+- Answer related to Code of Conduct or Film Festival offerings.
+If you have more questions or need further assistance, please let me know!&quot;
+
+</content>
+        <inputs>
+            <apiName>Question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:Question</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>FU7BFf0mxiC/4tkF69bXul+OBKx80kjqSvEPfx+mcoA=_14</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a service agent for Coral Cloud Resort, assisting customers with questions about our policies and the Coral Film Festival events and offerings.
+
+The customer&apos;s question is as follows: {!$Input:Question}
+
+Use the following information to craft your response:
+
+1. Code of Conduct:  {!$EinsteinSearch:File_ADL_Code_of_Conduct_1Cx_az1b19741b1.results} 
+
+2. Film Festival Events and Offerings:  {!$EinsteinSearch:KA_Coral_Cloud_Experience_Agent_Library_1Cx_az1b6ebae40.results} 
+
+Instructions:
+
+- Your response should be written in a professional and friendly tone.
+- Do not include unrelated information or assume details that are not explicitly provided in the results.
+- Follow these specific policies:
+- Avoid mentioning any customer details that are not part of the provided query or results.
+- Do not speculate or make assumptions if the information is incomplete. Instead, suggest the customer reach out for clarification.
+- Respond in clear, plain text suitable for a chat conversation.
+- Begin your response by acknowledging the customer’s question.
+- Provide a direct, concise answer based on the available information.
+
+If both data sources return results, include information from both.
+If only one source returns results, focus on that source and let the customer know additional information is unavailable.
+If no relevant results are returned, reply:
+&quot;I’m sorry, I couldn’t find specific information related to your query. Please reach out to our support team for further assistance.&quot;
+
+Example Response Format:
+
+&quot;Thank you for your question. Based on the information available:
+- Answer related to Code of Conduct or Film Festival offerings.
+If you have more questions or need further assistance, please let me know!&quot;
+
+</content>
+        <inputs>
+            <apiName>Question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:Question</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/File_ADL_Code_of_Conduct_1Cx_az1b19741b1</definition>
+            <description>File_ADL_Code_of_Conduct</description>
+            <label>File_ADL_Code_of_Conduct</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Question}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:File_ADL_Code_of_Conduct_1Cx_az1b19741b1</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/KA_Coral_Cloud_Experience_Agent_Library_1Cx_az1b6ebae40</definition>
+            <description>KA_Coral_Cloud_Experience_Agent_Library_</description>
+            <label>KA_Coral_Cloud_Experience_Agent_Library_</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Question}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:KA_Coral_Cloud_Experience_Agent_Library_1Cx_az1b6ebae40</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>FU7BFf0mxiC/4tkF69bXul+OBKx80kjqSvEPfx+mcoA=_15</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

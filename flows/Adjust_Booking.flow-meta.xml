@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Assign updated booking record to output variable.</description>
+        <name>Assign_Booking_Output</name>
+        <label>Assign Booking Output</label>
+        <locationX>176</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>updatedBooking.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Update_Booking_Record</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Assign the number of guests for the booking.</description>
+        <name>Update_Guests</name>
+        <label>Update Guests</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Booking.Number_of_Guests__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>numberOfGuests</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Booking_Record</targetReference>
+        </connector>
+    </assignments>
+    <description>This flow updates the Number of Guests field for a booking.</description>
+    <environments>Default</environments>
+    <interviewLabel>Adjust Booking {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Adjust Booking</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get Booking record based on the Booking Record Number.</description>
+        <name>Get_Booking</name>
+        <label>Get Booking</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Guests</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>bookingRecordNumber</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Booking__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update the number of guests on the booking record.</description>
+        <name>Update_Booking_Record</name>
+        <label>Update Booking Record</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <connector>
+            <targetReference>Assign_Booking_Output</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Booking.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Number_of_Guests__c</field>
+            <value>
+                <elementReference>numberOfGuests</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Booking__c</object>
+    </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Booking</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>This is the Booking Record Number the user has provided as input.</description>
+        <name>bookingRecordNumber</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>This variable indicates the number of guests that will be updated in the booking record.</description>
+        <name>numberOfGuests</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <description>This is the output booking record after the number of guests for this booking is updated.</description>
+        <name>updatedBooking</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Booking__c</objectType>
+    </variables>
+</Flow>

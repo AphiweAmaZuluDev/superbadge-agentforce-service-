@@ -26,8 +26,9 @@ To meet these demands, Coral Cloud Resorts is expanding service hours, offering 
 I started by managing the data sources to provide access to the knowledge articles. I did this by creating 2 data libraries, one for the knowledge articles called **Coral Cloud Experience Agent Library** and another for the code of conduct agreement pdf file called **Code of Conduct Agreement**. 
 
 **Coral Cloud Experience Agent Library Configuration**
+**Image 1**
 <img width="1919" height="866" alt="Configure Data Library - 1" src="https://github.com/user-attachments/assets/3cc35368-659c-41d1-b24d-9cd3f9c57d81" />
-
+**Image 2**
 <img width="1917" height="867" alt="Configure Data Library - 2" src="https://github.com/user-attachments/assets/4ae5c226-85d8-4eac-a425-b80114982099" />
 
 

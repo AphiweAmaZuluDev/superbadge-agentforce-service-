@@ -14,4 +14,11 @@ To meet these demands, Coral Cloud Resorts is expanding service hours, offering 
 - Use topics like General FAQs to handle common questions and create custom topics to highlight festival-related offerings.
 - Set up routing flows to transfer unresolved or complex guest queries to service representatives for further assistance.
 
+### ROI
+- The Coral Cloud Experience Agent aims to help the resort maintain exceptional guest service during the busy festival season while optimizing staff workloads.
+
+
 ## Solution:
+### Step 1: Defining Role & Context
+
+<img width="1917" height="869" alt="Define Agent Role and Context " src="https://github.com/user-attachments/assets/2f651f8e-1224-495a-921b-9d2428d66489" />

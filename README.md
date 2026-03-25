@@ -25,14 +25,15 @@ To meet these demands, Coral Cloud Resorts is expanding service hours, offering 
 ### Step 2: Integration of knowledge articles within the Agenforce Builder
 I started by managing the data sources to provide access to the knowledge articles. I did this by creating 2 data libraries, one for the knowledge articles called **Coral Cloud Experience Agent Library** and another for the code of conduct agreement pdf file called **Code of Conduct Agreement**. 
 
-**Coral Cloud Experience Agent Library Configuration**
+### Coral Cloud Experience Agent Library Configuration
 **Image 1**
 <img width="1919" height="866" alt="Configure Data Library - 1" src="https://github.com/user-attachments/assets/3cc35368-659c-41d1-b24d-9cd3f9c57d81" />
 **Image 2**
 <img width="1917" height="867" alt="Configure Data Library - 2" src="https://github.com/user-attachments/assets/4ae5c226-85d8-4eac-a425-b80114982099" />
 
 
-**Code of Conduct Agreement Library Configuration**
+### Code of Conduct Agreement Library Configuration
+**Image 1**
 <img width="1918" height="874" alt="Configure CoC Data Library - 3" src="https://github.com/user-attachments/assets/c8e3ccac-9e8e-4f31-9398-4eaf36552622" />
 
 
